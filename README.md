@@ -1,54 +1,74 @@
-# React + TypeScript + Vite
+# Habit Tracker
+[![Ask DeepWiki](https://devin.ai/assets/askdeepwiki.png)](https://deepwiki.com/Santiago2132/habittracker.git)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A web application designed to help you build and maintain good habits. Track your progress for daily, weekly, or monthly habits with a clean and simple interface. This project is built using React, TypeScript, Vite, and styled with Tailwind CSS. Habit data is stored locally in your browser's `localStorage`.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+*   **Add Habits:** Easily create new habits with a custom name and specify their frequency (daily, weekly, or monthly).
+*   **Track Completion:** Mark habits as completed for the current day. The completion status is visually indicated.
+*   **View Details:** See when each habit was created.
+*   **Delete Habits:** Remove habits you no longer wish to track.
+*   **Local Storage:** Your habit data is saved in your browser, so your habits persist across sessions.
+*   **Responsive Design:** Use the tracker комфортабельно on various screen sizes.
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+*   **Frontend:** React, TypeScript
+*   **Build Tool:** Vite
+*   **Styling:** Tailwind CSS (via CDN)
+*   **Linting:** ESLint
+*   **ID Generation:** UUID
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Getting Started
+
+Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+
+*   Node.js (version 18.x or later recommended)
+*   npm (comes with Node.js)
+
+### Installation
+
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/santiago2132/habittracker.git
+    ```
+
+2.  **Navigate to the project directory:**
+    ```bash
+    cd habittracker
+    ```
+
+3.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+
+### Running the Application
+
+To start the development server:
+
+```bash
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+This will typically open the application in your default web browser at `http://localhost:5173`. The server supports Hot Module Replacement (HMR) for a smooth development experience.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Building for Production
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+To create an optimized production build:
+
+```bash
+npm run build
 ```
+
+The bundled static assets will be placed in the `dist/` directory. You can then deploy this directory to any static site hosting service.
+
+### Linting
+
+To check the codebase for linting errors and style issues:
+
+```bash
+npm run lint
