@@ -1,5 +1,4 @@
 # Habit Tracker
-[![Ask DeepWiki](https://devin.ai/assets/askdeepwiki.png)](https://deepwiki.com/Santiago2132/habittracker.git)
 
 A web application designed to help you build and maintain good habits. Track your progress for daily, weekly, or monthly habits with a clean and simple interface. This project is built using React, TypeScript, Vite, and styled with Tailwind CSS. Habit data is stored locally in your browser's `localStorage`.
 
